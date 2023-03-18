@@ -1,6 +1,7 @@
 # ITask-SessionofScientificCommunications-CSharpProject
 
 <h2>
-  I developed a music player program using C#. The program is capable of playing MP3 files and allows the user to select a track from a playlist. The music player was designed with a user-friendly interface and intuitive controls, making it easy for anyone to use.
-  One of the main features of the music player is its ability to create and manage playlists, allowing users to organize their music collection according to their preferences. The program also includes an option to repeat a track or playlist and a shuffle feature for a more diverse listening experience.
-  As a student, I aimed to develop a high-quality application that could rival popular music players in the market. The program was thoroughly tested and optimized to ensure smooth playback and minimal resource usage. Overall, the music player project was a great learning experience, allowing me to sharpen my programming skills and gain valuable experience in software development.</h2>
+  As a part of my software development coursework, I developed a task management system using C# programming language. The system offers a range of features that enable users to manage their tasks smartly. Users can create and delete tasks, group them into different categories, and set priority levels based on their importance.
+  One of the standout features of the system is the ability to receive notifications via email and a message box before a task is scheduled to start. Users can receive notifications one minute before the task starts, as well as when the task is marked as "in progress". This feature is particularly useful for individuals who have a lot on their plate and need to stay organized.
+  The task management system was developed with a user-friendly interface, making it easy to use and navigate. It was rigorously tested to ensure seamless performance and minimal errors.
+Overall, the project was a great learning experience for me, allowing me to develop my skills in software development and enhance my problem-solving abilities.</h2>
