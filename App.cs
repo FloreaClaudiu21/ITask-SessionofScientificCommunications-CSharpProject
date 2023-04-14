@@ -89,8 +89,8 @@ namespace ITask2 {
   
        private void sendMail(String subject, String body) {
             string fromEmail = "floreaclaudiu128@gmail.com";
-            SmtpClient smtpClient = new SmtpClient("smtp-relay.sendinblue.com", 587);
-            smtpClient.Credentials = new NetworkCredential(fromEmail, "2XphZTbRNWwvjL63");
+            SmtpClient smtpClient = new SmtpClient("smtp.sendgrid.net", 587);
+            smtpClient.Credentials = new NetworkCredential("apikey", "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");
             smtpClient.EnableSsl = true;
             MailMessage mailMessage = new MailMessage(fromEmail, toEmail, subject, body);
             try {
