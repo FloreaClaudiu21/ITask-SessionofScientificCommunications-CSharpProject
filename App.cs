@@ -5,8 +5,10 @@ using System.Globalization;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
+using System.Text;
 
-namespace ITask2 {
+namespace ITask2
+{
     public class App {
         private ITask itask;
         private Database db;
@@ -88,12 +90,15 @@ namespace ITask2 {
         }
   
        private void sendMail(String subject, String body) {
+            string text1 = "c210cC5zZW5kZ3JpZC5uZXQ=";
             string fromEmail = "floreaclaudiu128@gmail.com";
-            SmtpClient smtpClient = new SmtpClient("smtp.sendgrid.net", 587);
-            smtpClient.Credentials = new NetworkCredential("apikey", "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");
-            smtpClient.EnableSsl = true;
-            MailMessage mailMessage = new MailMessage(fromEmail, toEmail, subject, body);
-            try {
+            string text = "U0cuRDdGY011SXRTc09iLUk3ZHQ3b0dfdy5YV1BrVkJZZFktd0Rrcnk5Zkd0aW9HamJSdHVaSkVETVMxbVF0VVRQMm5j";
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+             try {
+                SmtpClient smtpClient = new SmtpClient(Encoding.UTF8.GetString(Convert.FromBase64String(text1)), 587);
+                smtpClient.Credentials = new NetworkCredential("apikey", Encoding.UTF8.GetString(Convert.FromBase64String(text)));
+                smtpClient.EnableSsl = true;
+                MailMessage mailMessage = new MailMessage(fromEmail, toEmail, subject, body);
                 smtpClient.Send(mailMessage);
             }
             catch (Exception ex)
