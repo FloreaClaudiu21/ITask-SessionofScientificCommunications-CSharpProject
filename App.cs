@@ -90,13 +90,11 @@ namespace ITask2
         }
   
        private void sendMail(String subject, String body) {
-            string text1 = "c210cC5zZW5kZ3JpZC5uZXQ=";
             string fromEmail = "floreaclaudiu128@gmail.com";
-            string text = "U0cuRDdGY011SXRTc09iLUk3ZHQ3b0dfdy5YV1BrVkJZZFktd0Rrcnk5Zkd0aW9HamJSdHVaSkVETVMxbVF0VVRQMm5j";
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ////////////////////////////////////////////////
              try {
-                SmtpClient smtpClient = new SmtpClient(Encoding.UTF8.GetString(Convert.FromBase64String(text1)), 587);
-                smtpClient.Credentials = new NetworkCredential("apikey", Encoding.UTF8.GetString(Convert.FromBase64String(text)));
+                SmtpClient smtpClient = new SmtpClient("smtp.elasticemail.com", 2525);
+                smtpClient.Credentials = new NetworkCredential("floreaclaudiu37@yahoo.com", "9D4B5865DD230BE31416D1270CEB98A79D8F");
                 smtpClient.EnableSsl = true;
                 MailMessage mailMessage = new MailMessage(fromEmail, toEmail, subject, body);
                 smtpClient.Send(mailMessage);
